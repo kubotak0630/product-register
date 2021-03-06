@@ -16,11 +16,11 @@ ARG UID=unknow
 ARG GID=unknow
 # コンテナ内に名称dockerでグループを作成
 # コンテナ内に名称dockerでdockerグループに所属するユーザーを作成
-RUN groupadd -g ${GID} docker && \
-    useradd -u ${UID} -g ${GID} -s /bin/bash -M docker
+# RUN groupadd -g ${GID} docker && \
+#     useradd -u ${UID} -g ${GID} -s /bin/bash -M docker
 
 # コンテナを実行するユーザーを指定
-USER ${UID}
+# USER ${UID}
 
 
 

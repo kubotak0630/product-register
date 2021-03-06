@@ -7,9 +7,9 @@ services:
   web:
     build:
       context: .
-      args:
-        - UID=${LOCALUID}
-        - GID=${LOCALGID}
+      # args:
+      #   - UID=${LOCALUID}
+      #   - GID=${LOCALGID}
     ports:
       - '3000:3000'
     volumes:

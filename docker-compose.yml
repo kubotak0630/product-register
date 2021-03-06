@@ -8,8 +8,8 @@ services:
     build:
       context: .
       # args:
-      #   - UID=${LOCALUID}
-      #   - GID=${LOCALGID}
+      # - UID=${LOCALUID}
+      # - GID=${LOCALGID}
     ports:
       - '3000:3000'
     volumes:
@@ -28,5 +28,6 @@ services:
     volumes:
       - 'db-data:/var/lib/postgresql/data'
     environment:
+      - 'POSTGRES_USER=postgres'
       - 'POSTGRES_PASSWORD=postgres'
       - 'POSTGRES_HOST_AUTH_METHOD=true'
